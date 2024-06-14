@@ -23,6 +23,13 @@ print(sum) # solution: 4613732
 # reference: https://www.grae.io/post/euler_problem_2/
 
 # Problem 3
-factors=[]
-
-
+target=600851475143
+i=2 # Smallest prime factor
+for num in range(0,target):
+    if i >= target: # Prime factor of the number should not be greater than the number
+        break
+    elif target % i == 0: # Check if the number is evenly divisible by i
+        target = target / i
+    else:
+        i= i + 1
+print (target)   
