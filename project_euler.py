@@ -20,16 +20,18 @@ while fib1+fib2<4000000:
          sum+= fib2
 print(sum) # solution: 4613732
 
-# reference: https://www.grae.io/post/euler_problem_2/
+# source: https://www.grae.io/post/euler_problem_2/
 
 # Problem 3
 target=600851475143
-i=2 # Smallest prime factor
-for num in range(0,target):
-    if i >= target: # Prime factor of the number should not be greater than the number
+factor=2
+for x in range(2,target):
+    if factor >= target:
         break
-    elif target % i == 0: # Check if the number is evenly divisible by i
-        target = target / i
+    elif target % factor == 0: 
+        target = target / factor
     else:
-        i= i + 1
-print (target)   
+        factor = factor + 1
+print (target) # solution: 6857
+
+# source: https://stackoverflow.com/questions/12999706/stuck-on-project-euler-3-in-python

@@ -25,3 +25,20 @@ while (fib1+fib2<4000000){
 print(sum) # solution: 4613732
 
 # Problem 3
+target<-600851475143
+factor<-2
+range=c(factor:target)
+for (x in range){
+  if(factor>=target){
+    break
+  }else if(target%%factor==0){
+    target<=target/factor
+  } else{
+    factor=factor+1
+  }
+  }
+print(target) # Error: vector memory limit of 16.0 Gb reached, see mem.maxVSize()
+  
+  
+  
+  
