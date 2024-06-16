@@ -1,0 +1,17 @@
+---
+title: "Demonstrating the Central Limit Theorem"
+output: html_notebook
+---
+The CLT states that as the number of trials "n" increases, a binomial distribution with probability "p" approaches a normal distribution. This can be illustrated using R's rnorm() and rbinorm() functions.
+
+## Proof of Concept:
+Here is a binomial distribution where 10 trials (n=10) with a probability of 0.5 are repeated 100 times:
+```{r}
+hist(rbinom(10,100,0.5))
+```
+
+Here is the same binomial, except with 10,000 trials (n=10,000):
+```{r}
+hist(rbinom(10000,100,0.5))
+```
+
